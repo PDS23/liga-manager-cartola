@@ -1,11 +1,11 @@
-
 import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  root: '.',
+export default defineConfig({  plugins: [react()],
+  base: './', // Adiciona esta linha para resolver caminhos relativos no build
+  root: 
+'.',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
